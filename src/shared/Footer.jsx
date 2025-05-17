@@ -1,13 +1,17 @@
 import React from "react";
 import Logo from "../assets/Home/logo.png";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0A0D53] text-white py-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[#020617] text-white pt-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Contact Information */}
         <div>
-          <img src={Logo} alt="Logo" className="w-16 mb-4" />
+          <img src={Logo} alt="Logo" className="w-[200px] mb-4" />
+        </div>
+        <div>
+          
           <h2 className="text-lg font-bold mb-2">Contact Information</h2>
           <p className="mb-1">Phone Number: +99 125 125894</p>
           <p className="mb-1">Email: DamieMail@Gmail.Com</p>
@@ -48,19 +52,15 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-8 text-center">
-        <p>Social Media</p>
-        <div className="flex justify-center space-x-4 mt-4">
-          <a href="#" className="hover:text-gray-400">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" className="hover:text-gray-400">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="hover:text-gray-400">
-            <i className="fab fa-instagram"></i>
-          </a>
-        </div>
+      <div className="mt-8 py-5 text-center bg-[#71A850] ">
+
+        <ul className=" flex justify-between text-lg container m-auto">
+          <li><Link to={'faq'}>FAQ</Link></li>
+          <li><Link to={'privacyPolicy'}>Privacy Policy</Link></li>
+          <li><Link to={'TermsAndCondition'}>Terms of Condition</Link></li>
+          <li>Contact us: info@jasu.us</li>
+          <li>Copyright 2022 Jasu, All rights reserved</li>
+        </ul>
       </div>
     </footer>
   );

@@ -6,9 +6,13 @@ import { Footer } from '../shared/Footer'
 export const Root = () => {
   return (
     <div>
-        <Navbar></Navbar>
-        <Outlet></Outlet>
-        <Footer></Footer>
+      <Navbar></Navbar>
+      <div className='bg-[#F8FAFC] '>
+        <div className=''>
+          <Outlet></Outlet>
+        </div>
+      </div>
+      <Footer></Footer>
     </div>
   )
 }

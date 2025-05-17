@@ -1,15 +1,12 @@
 
 import { Root } from "../layout/Root";
-import { AboutPage } from "../Pages/CompanyPage/AboutPage";
-import { CompanyPage } from "../Pages/CompanyPage/CompanyPage";
-import { TechPartnerPage } from "../Pages/CompanyPage/TechPartnerPage";
+
 import { ContuctUsPage } from "../Pages/ContactUsPage/ContuctUsPage";
 import { HomePage } from "../Pages/HomePage/HomePage";
 import { createBrowserRouter } from "react-router-dom";
-import { StructuredCabilingPage } from "../Pages/ServicesPage/StructuredCabilingPage";
-import { BreakFixServicesPage } from "../Pages/ServicesPage/BreakFixServicesPage";
+
 import { SubmitTicketPage } from "../Pages/SubmitTicketPage.jsx/SubmitTicketPage";
-import { BlogPage } from "../Pages/BlogPage/BlogPage";
+import { BlogPage } from "../Pages/CataloguePage/CataloguePage";
 import { Login } from "../Auth/Login";
 import { ForgotPassword } from "../Auth/ForgotPassword";
 import { Verification } from "../Auth/Verification";
@@ -17,6 +14,12 @@ import { NewPassword } from "../Auth/NewPassword";
 import { SignUp } from "../Auth/SignUp";
 import { ProfilePage } from "../Pages/ProfilePage/ProfilePage";
 import { OngoingTicketPage } from "../Pages/ProfilePage/OngoingTicketPage";
+import CategogueDetails from "../components/catelougue/CategogueDetails";
+import ProccessDetails from "../components/catelougue/ProccessDetails";
+import UpdateProfile from "../Pages/ProfilePage/UpdateProfile";
+import Faq from "../Pages/Faq/Faq";
+import PrivacyPolicy from "../Pages/ProfilePage/PrivacyPolicy";
+import TermsAndConditions from "../Pages/ProfilePage/TermsAndConditions";
 
 export const router = createBrowserRouter([
     {
@@ -27,29 +30,22 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <HomePage></HomePage>,
             },
-            {
-                path: '/company/about-us',
-                element: <AboutPage></AboutPage>
-            },
-            {
-                path: '/company/tech-pertners',
-                element: <TechPartnerPage></TechPartnerPage>
-            },
-            {
-                path: '/services/Structure-Cabling',
-                element: <StructuredCabilingPage></StructuredCabilingPage>
-            },
-            {
-                path: '/services/Break-FixServices',
-                element: <BreakFixServicesPage></BreakFixServicesPage>
-            },
+           
             {
                 path: '/contactUs',
                 element: <ContuctUsPage></ContuctUsPage>
             },
             {
-                path: '/blog',
+                path: '/catelogue',
                 element: <BlogPage></BlogPage>
+            },
+            {
+                path: '/categogue/categogueDetails',
+                element: <CategogueDetails></CategogueDetails>
+            },
+            {
+                path: '/categogue/proccessDetails',
+                element: <ProccessDetails></ProccessDetails>
             },
             {
                 path: '/submit-a-ticket',
@@ -59,6 +55,22 @@ export const router = createBrowserRouter([
             {
                 path: '/profilePage',
                 element: <ProfilePage></ProfilePage>
+            },
+             {
+                path: '/privacyPolicy',
+                element:<PrivacyPolicy></PrivacyPolicy>
+            },
+             {
+                path: '/TermsAndCondition',
+                element: <TermsAndConditions></TermsAndConditions>
+            },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
+            },
+            {
+                path: '/profilePage/updateProfile',
+                element: <UpdateProfile></UpdateProfile>
             },
             {
                 path: '/profilePage/ongoing-tickets',
