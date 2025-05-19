@@ -2,6 +2,6 @@ import React from 'react'
 
 export const OngoingTicketPage = () => {
   return (
-    <div>Ongodddsdfdgdss</div>
+    <div>Ongoddsdfdsdfdgdss</div>
   )
 }
